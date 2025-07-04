@@ -1,5 +1,18 @@
 # redis-api
 
+Aufgabe: Erstelle zwei namespaces in kubernetes. In dem einem namespace soll ein
+Deployment von redis mit 3 replicas vorhanden sein. Dabei sollen die Daten FLÜCHTIG gespeichert
+werden. In einem anderen Namespace soll ebenfalls ein Deployment erstellt werden
+mit drei Replicas basierend auf dem image `docker.io/naivary/redis-api:latest`. Das Deployment muss die folgenden Punkte enthalten:
+1. Konfiguration einer liveness probe
+2. Konfiguration einer readiness probe
+3. Konfiguration der redis-url unter welchen der redis server in dem ersten
+   Namespace erreichbar ist (für das Format der URL siehe [env-vars](#env-vars))
+
+Nach dem Deployment sollte es möglich sein über einen NodePort Service die
+redis-api anzusprechen und die abfrage
+`http://<node-api>:<node-port>?key=teccle` erfolgreich durchzuführen.
+
 ## livez
 
 Der Endpoint livez ist erreichbar mit einer GET-Methode unter dem root pfad e.g.
