@@ -37,6 +37,6 @@ Die folgenden env variables müssen gesetzt werden
 1. APP_PORT: port des redis-apis
 2. APP_HOST: host des redis-apis
 3. REDIS_URL: url, welche genutzt werden kann um sich mit den redis server zu
-   verbinden e.g. redis://@<adresse>:6379
+   verbinden e.g. `redis://@<adresse>:6379`
 
 
